@@ -1,5 +1,5 @@
 
-
+## Security Property 1
 {signal:
  [
   {name: 'clk', wave: 'p........|..'},
@@ -12,6 +12,29 @@
 ],
    head:{
      text:'Security Property 1 Violation',
+   },
+ config: { hscale: 1}
+}
+
+
+
+
+##Secruity Property 2
+
+
+
+{signal:
+ [
+  {name: 'clk', wave: 'p..|.......'},
+  {name: 'rst_n', wave: '0.1|.......'}, 
+  {name: 'x_offset', wave: '3..|.4.5.6.', data: [ '0', '-2','2','0']}, 
+  {name: 'y_offset', wave: '3..|.....4.', data: [ '0', '-1']}, 
+  {name: 'output_port_i', wave: '2..|..3.4..', data: ['0','WEST', 'NORTH', 'EAST']},  
+  {name: 'routing_violation_o', wave: '0..|....1..'}
+   
+],
+   head:{
+     text:'Security Property 2 Violation',
    },
  config: { hscale: 1}
 }
